@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="jeu.css">
 </head>
 <body>
-    
+    <div class="contener">
+
+    <div class="get">
+<p class="primer">5</p>
+<p>+</p>
+<p class="second">7</p>
+<p>=</p>
+<input type="number">
+</div>
+
+     <p class="scor">SCORE: 0points</p>
+     <p class="dd"></p>
+     <p class="temp">temps</p>
+
+    </div>
+    <!-- <div  class="proo"> -->
+    <div class="regle">
+        <div class="ref"> <h1>RÈGLES  DU  JEU <br>DE  <br> CALCUL  RAPIDE <br></h1>
+
+           <h3> Objectif du jeu :</h3>
+              Le but du jeu est de répondre correctement à un maximum <br> de questions de calcul dans un temps imparti.  <br> <br>
+         <h3> Déroulement du jeu : </h3> 
+           Une question de calcul apparaît à l'écran (exemple : 7 + 5 = ?). <br>
+           L'utilisateur doit entrer la bonne réponse avant que le temps imparti ne s'écoule. <br>
+           Après chaque réponse (correcte ou incorrecte), un nouveau calcul <br>
+           <h3> Système de points : </h3>
+            Bonne réponse dans le temps imparti → **+5 point <br>
+           Mauvaise réponse ou absence de réponse → **-5 point  <br>
+           
+           <h3>  Gestion du temps : </h3>
+           Chaque question doit être résolue en X secondes déterminer <br>
+           Si le temps est écoulé avant que l'utilisateur ne réponde : <br>
+           Si il  a au moins 5 points ,l'on lui retire 5 points .
+           Si il  a moins de 5 points , **il perd la partie immédiatement. 
+             Fin du jeu :  <br>
+           La partie s'arrête lorsqu'il n'a plus assez de points pour avancer  <br>  <br>
+            <button class="submit" >commencer</button>
+        </div>
+    </div>
+<!-- </div> -->
+    <script src="jeu.js"></script>
 </body>
 </html>
