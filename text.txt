@@ -1,1 +1,136 @@
-je suis un ficher texte
+Voici une répartition des tâches en six parties pour développer ce jeu en équipe, en utilisant uniquement JavaScript, HTML et CSS :  
+
+### **1. Interface utilisateur (UI) - HTML & CSS**  
+- Création de la structure HTML de la page (question, options, bouton de validation, timer, etc.).  
+- Mise en page et styles avec CSS (animations, mise en valeur des bonnes/mauvaises réponses).  
+
+### **2. Gestion des questions et réponses - JavaScript**  
+- Stockage des questions, réponses et options sous forme de tableau ou d'objet JSON.  
+- Sélection et affichage dynamique des questions.  
+
+### **3. Système de points et de score final - JavaScript**  
+- Incrémentation du score pour chaque bonne réponse.  
+- Affichage du score final à la fin du jeu.  
+
+### **4. Minuterie et gestion du temps - JavaScript**  
+- Implémentation d'un timer pour chaque question.  
+- Passage automatique à la question suivante en cas d’expiration du temps.  
+
+### **5. Interactions et logique du jeu - JavaScript**  
+- Gestion des clics sur les réponses et validation de la bonne réponse.  
+- Ajout d’effets visuels pour indiquer si la réponse est correcte ou non.  
+
+### **6. Fonctionnalités avancées (indices, questions bonus) - JavaScript**  
+- Ajout d’indices pour aider les joueurs.  
+- Implémentation de questions bonus pour gagner des points supplémentaires.  
+
+Chaque membre peut prendre une ou plusieurs tâches selon ses compétences. Tu veux un exemple de code de base pour commencer ? 🚀
+
+
+
+
+
+
+
+Voici une répartition détaillée des tâches pour chaque membre de l’équipe :
+
+---
+
+### **🎨 Membre 1 : Interface utilisateur (UI) - HTML & CSS**
+**Objectif :** Concevoir la structure et le design du jeu pour une bonne expérience utilisateur.  
+**Tâches :**  
+✅ Créer la page HTML avec les éléments suivants :  
+- Un conteneur principal pour le jeu.  
+- Un espace pour afficher la question.  
+- Une liste de boutons pour les choix de réponse.  
+- Un bouton "Suivant" pour passer à la question suivante.  
+- Une section pour afficher le score final.  
+- Une minuterie pour limiter le temps de réponse.  
+
+✅ Styliser la page avec CSS :  
+- Améliorer l’apparence du jeu (couleurs, polices, animations).  
+- Ajouter des effets visuels pour les bonnes/mauvaises réponses.  
+- Rendre l’interface responsive pour qu’elle s’adapte à tous les écrans.  
+
+---
+
+### **📜 Membre 2 : Gestion des questions et réponses - JavaScript**  
+**Objectif :** Gérer le stockage et l'affichage des questions.  
+**Tâches :**  
+✅ Créer un tableau ou un fichier JSON contenant les questions et réponses :  
+```javascript
+const questions = [
+    { 
+        question: "Quelle est la capitale de la France ?", 
+        options: ["Paris", "Londres", "Berlin", "Madrid"], 
+        answer: "Paris"
+    },
+    ...
+];
+```
+✅ Afficher dynamiquement les questions sur l’interface.  
+✅ Charger la question suivante après une réponse ou un timeout.  
+
+---
+
+### **🏆 Membre 3 : Système de points et affichage du score - JavaScript**  
+**Objectif :** Gérer le score et afficher le résultat final.  
+**Tâches :**  
+✅ Ajouter un compteur de points qui s'incrémente à chaque bonne réponse.  
+✅ Mettre à jour l'affichage du score en temps réel.  
+✅ Afficher un écran final avec le score et un message personnalisé :  
+```javascript
+if (score >= 8) {
+    message = "Excellent !";
+} else if (score >= 5) {
+    message = "Bien joué !";
+} else {
+    message = "Tu peux faire mieux !";
+}
+```
+
+---
+
+### **⏳ Membre 4 : Minuterie et gestion du temps - JavaScript**  
+**Objectif :** Ajouter une limite de temps pour chaque question.  
+**Tâches :**  
+✅ Créer un timer qui démarre dès qu’une question s’affiche.  
+✅ Réduire le temps affiché à chaque seconde.  
+✅ Passer automatiquement à la question suivante si le temps est écoulé.  
+✅ Ajouter un effet visuel pour signaler la fin du temps :  
+```javascript
+let timeLeft = 10;
+const timer = setInterval(() => {
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        nextQuestion();
+    } else {
+        document.getElementById("timer").textContent = timeLeft;
+        timeLeft--;
+    }
+}, 1000);
+```
+
+---
+
+### **🕹️ Membre 5 : Interactions et logique du jeu - JavaScript**  
+**Objectif :** Gérer les interactions entre le joueur et l’interface.  
+**Tâches :**  
+✅ Gérer le clic sur les réponses et vérifier si elles sont correctes.  
+✅ Désactiver les autres choix après une réponse.  
+✅ Ajouter un effet visuel (vert pour bonne réponse, rouge pour mauvaise).  
+✅ Permettre de passer à la question suivante en cliquant sur "Suivant".  
+
+---
+
+### **🎁 Membre 6 : Fonctionnalités avancées (indices, questions bonus) - JavaScript**  
+**Objectif :** Enrichir l’expérience de jeu avec des fonctionnalités supplémentaires.  
+**Tâches :**  
+✅ Ajouter un bouton "Indice" qui affiche un indice pour la question.  
+✅ Ajouter des questions bonus avec un gain de points supplémentaires.  
+✅ Gérer des niveaux de difficulté (facile, moyen, difficile).  
+
+---
+
+Cette répartition permet à chacun de se concentrer sur une partie précise du projet tout en assurant une bonne coordination.  
+Besoin d’un fichier de base pour démarrer le projet ? 🚀
